@@ -1,0 +1,313 @@
+/* Global classes */
+
+.hidden {
+  display: none;
+}
+
+.static-clear {
+  clear: both;
+}
+
+.container {
+  max-width: 1280px;
+  margin-inline: auto;
+}
+
+/* Global props */
+
+:root {
+  --main-clr: cyan;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: sans-serif;
+  color: #333;
+}
+
+main {
+}
+
+h2,
+h3 {
+  text-transform: capitalize;
+  color: var(--main-clr);
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: inherit;
+}
+
+section {
+  padding-block: 75px;
+}
+
+header.main-header {
+  background-image: url("../imgs/beach-666122_1280.jpg");
+  background-size: cover;
+  color: #eee;
+  overflow: auto;
+  /* 
+        to show the margin of its content (article) 
+    */
+}
+
+.main-header nav {
+  overflow: hidden;
+  padding-block: 1em;
+  text-transform: capitalize;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #003f45;
+}
+
+.main-header nav .logo {
+  font-size: 2em;
+  float: left;
+  font-weight: bold;
+  font-family: serif;
+  font-variant: small-caps;
+}
+
+.main-header nav ul {
+  float: right;
+}
+
+.main-header nav li {
+  list-style-type: none;
+  float: left;
+}
+
+.main-header nav li.drop-item {
+  position: relative;
+}
+
+.main-header nav li.drop-item span {
+  font-size: 10px;
+  transition: 0.2s ease;
+  display: inline-block;
+}
+
+.main-header nav li.drop-item ul {
+  position: fixed;
+  padding-top: 1rem;
+}
+
+.main-header nav li.drop-item:hover span {
+  transform: rotateX(180deg);
+}
+
+.main-header nav li.drop-item:hover ul {
+  display: block;
+}
+
+.main-header nav a {
+  color: inherit;
+  padding: 0.5em 1em;
+  display: inline-block;
+  transition: 0.2s ease;
+}
+
+/* a.active, */
+.main-header nav a:hover {
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.main-header article {
+  margin-block: 250px;
+  width: fit-content;
+}
+
+.main-header article h1 {
+  font-size: 3em;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.main-header article p {
+  margin-block: 1.5rem;
+  max-width: 440px;
+  line-height: 1.6;
+}
+
+.main-header .btn {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #ffff;
+  border: 1px solid;
+  font-weight: bold;
+  transition: 0.1s ease;
+  background-color: rgba(0, 255, 255, 0.5);
+}
+
+.main-header .btn:hover {
+  opacity: 0.8;
+}
+
+.jorneys {
+  background-color: #e2f3f7;
+}
+
+.jorneys header {
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+.jorneys header p {
+  margin-block: 1rem;
+}
+
+.jorneys .content {
+  /* width: fit-content; */
+  /* 
+        not working since its all children are floating 
+    */
+  width: 930px;
+  margin-inline: auto;
+}
+
+.jorneys figure {
+  width: 300px;
+  float: left;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 0 3px #bbb;
+  transition: 0.2s ease;
+  margin-block-end: 15px;
+}
+
+.jorneys figure:nth-of-type(3n + 2) {
+  margin-inline: 15px;
+}
+
+.jorneys figure:last-of-type::before {
+  content: "";
+  clear: both;
+}
+
+.jorneys figure:hover {
+  box-shadow: 0 0 10px #aaa;
+}
+
+.jorneys figure img {
+  display: inline-block;
+  width: 100%;
+  height: 250px;
+}
+
+.jorneys figcaption {
+  padding: 20px;
+}
+
+.next-trip {
+  text-align: center;
+}
+
+.next-trip p {
+  margin-block: 10px 75px;
+}
+
+footer {
+  border-top: 1px solid #ddd;
+  color: #333;
+  background-color: #e2f3f7;
+}
+
+footer > div {
+  padding-block: 75px;
+  overflow: hidden;
+}
+
+footer .left-side {
+  float: left;
+  width: calc(100% / 3 * 2);
+}
+
+footer .right-side {
+  float: right;
+  width: calc(100% / 3);
+}
+
+footer ul {
+  list-style: none;
+  overflow: hidden;
+}
+
+footer li {
+  width: 50%;
+  float: left;
+}
+
+footer li a {
+  text-decoration: none;
+  display: block;
+  padding-block: 10px;
+  transition: 0.3s;
+  color: blue;
+}
+
+footer li a:hover {
+  color: rgba(0, 0, 255, 0.7);
+}
+
+footer div > p {
+  opacity: 0.7;
+  font-size: 0.8rem;
+}
+
+footer form {
+  margin-block: 2rem;
+  overflow: auto;
+}
+
+footer input {
+  display: inline-block;
+  width: calc(70% - 10px);
+  height: 40px;
+  padding: 5px;
+  float: left;
+}
+
+footer button {
+  width: 30%;
+  float: right;
+  height: 40px;
+  background-color: var(--main-clr);
+  border-color: #fff;
+}
+
+footer .right-side li {
+  width: fit-content;
+  margin-inline-end: 2rem;
+  display: block;
+}
+
+footer .real-footer-xd {
+  background-color: #003f45;
+  color: white;
+  text-transform: capitalize;
+  padding: 1.5rem;
+  font-size: 0.8rem;
+  font-weight: 200;
+  text-align: center;
+}
